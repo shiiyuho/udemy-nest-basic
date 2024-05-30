@@ -15,3 +15,11 @@ $ nest new プロジェクト名
 
 ◇新規コントローラの作成
 $ nest g controller コントローラー名
+
+main.ts
+  ↓
+app.module.ts
+　↓
+feature.module.ts　→feature.controller/ts
+　↓　　　　       
+feature.service
