@@ -35,10 +35,12 @@ nest g module 【モジュール名｝
 controller
 ・・・クライアントからリクエストを受け入れ、クライアントにレスポンスを返す
 コントローラーを作成するコマンド
-nest g controller items --no-spec
+nest g controller {コントローラー名} --no-spec
 
 Service
 ・・・ビジネスロジックを定義する
+サービスを作成するコマンド
+nest g service {サービス名} --no-spec
 
 Dependency Injection（DI）
 ・・・依存関係のあるオブジェクトを外部から注入する。
