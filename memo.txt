@@ -23,3 +23,8 @@ app.module.ts
 feature.module.ts　→feature.controller/ts
 　↓　　　　       
 feature.service
+
+moduleの定義
+@module({
+    //処理
+})
