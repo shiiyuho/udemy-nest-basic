@@ -36,3 +36,9 @@ controller
 ・・・クライアントからリクエストを受け入れ、クライアントにレスポンスを返す
 コントローラーを作成するコマンド
 nest g controller items --no-spec
+
+Service
+・・・ビジネスロジックを定義する
+
+Dependency Injection（DI）
+・・・依存関係のあるオブジェクトを外部から注入する。
