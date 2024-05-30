@@ -34,3 +34,5 @@ nest g module 【モジュール名｝
 
 controller
 ・・・クライアントからリクエストを受け入れ、クライアントにレスポンスを返す
+コントローラーを作成するコマンド
+nest g controller items --no-spec
