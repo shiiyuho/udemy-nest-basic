@@ -47,3 +47,6 @@ Dependency Injection（DI）
 
 DTO
 ・・・データの受け渡しに使われるオブジェクト。
+
+例外処理
+・・・
