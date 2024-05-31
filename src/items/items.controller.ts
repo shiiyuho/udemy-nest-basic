@@ -1,4 +1,12 @@
-import { Controller, Get, Body, Post, Param, Patch } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Body,
+  Post,
+  Param,
+  Patch,
+  Delete,
+} from '@nestjs/common';
 import { ItemsService } from './items.service';
 import { ItemStatus } from './item-status.enum';
 import { Item } from './item.model';
@@ -33,5 +41,10 @@ export class ItemsController {
   @Patch(';id')
   updateStatus(@Param('id') id: string): Item {
     return this.itemsService.updateStatus(id);
+  }
+
+  @Delete(';id')
+  delete(@Param('id') id: string): void {
+    this.itemsService.delete(id);
   }
 }
