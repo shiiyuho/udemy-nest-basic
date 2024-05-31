@@ -44,3 +44,6 @@ nest g service {サービス名} --no-spec
 
 Dependency Injection（DI）
 ・・・依存関係のあるオブジェクトを外部から注入する。
+
+DTO
+・・・データの受け渡しに使われるオブジェクト。
