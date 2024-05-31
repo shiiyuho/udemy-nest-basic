@@ -1,0 +1,46 @@
+Nest.js
+・・・バックエンドの開発フレームワーク（TypeScliptで作られている）
+メリット
+・型の恩恵を受けられる
+・Expressの機能やライブラリを使うことができる
+・NestClIを使ってプロジェクトやファイルのテンプレートを生成できる
+デメリット
+・情報が少ない
+・日本語に対応してない
+
+Nest CLI
+・・・コマンドラインインターフェース
+◇プロジェクトの作成
+$ nest new プロジェクト名
+
+◇新規コントローラの作成
+$ nest g controller コントローラー名
+
+main.ts
+  ↓
+app.module.ts
+　↓
+feature.module.ts　→feature.controller/ts
+　↓　　　　       
+feature.service
+
+moduleの定義
+@module({
+    //処理
+})
+
+モジュールを作成するコマンド 
+nest g module 【モジュール名｝
+
+controller
+・・・クライアントからリクエストを受け入れ、クライアントにレスポンスを返す
+コントローラーを作成するコマンド
+nest g controller {コントローラー名} --no-spec
+
+Service
+・・・ビジネスロジックを定義する
+サービスを作成するコマンド
+nest g service {サービス名} --no-spec
+
+Dependency Injection（DI）
+・・・依存関係のあるオブジェクトを外部から注入する。
