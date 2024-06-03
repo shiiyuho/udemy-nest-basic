@@ -14,6 +14,7 @@ import { CreateItemDto } from './dto/create-item.dto';
 
 @Controller('items')
 export class ItemsController {
+  // eslint-disable-next-line no-unused-vars
   constructor(private readonly itemsService: ItemsService) {}
   @Get()
   findAll(): Item[] {
