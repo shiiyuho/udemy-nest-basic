@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { Body, Controller, Post } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
-import { User } from 'src/entities/user.entity';
+import { User } from '../entities/user.entity';
 import { AuthService } from './auth.service';
 import { CredentialsDto } from './dto/credentials.dto';
 

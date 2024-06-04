@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { ItemStatus } from 'src/items/item-status.enum';
+import { ItemStatus } from '../items/item-status.enum';
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { User } from './user.entity';
 
