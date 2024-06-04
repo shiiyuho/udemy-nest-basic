@@ -1,7 +1,6 @@
 //プロジェクトポイント
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { Validate } from 'class-validator';
 import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
