@@ -9,6 +9,8 @@ import {
   ParseUUIDPipe,
   Patch,
   UseGuards,
+  UseInterceptors,
+  ClassSerializerInterceptor,
 } from '@nestjs/common';
 import { ItemsService } from './items.service';
 import { Item } from '../entities/item.entity';
@@ -18,6 +20,7 @@ import { GetUser } from 'src/auth/decorator/get-user.decoretor';
 import { User } from 'src/entities/user.entity';
 
 @Controller('items')
+@UseInterceptors(ClassSerializerInterceptor)
 export class ItemsController {
   // eslint-disable-next-line no-undef
   [x: string]: any;
@@ -37,16 +40,22 @@ export class ItemsController {
     @Body() createItemDto: CreateItemDto,
     @GetUser() user: User,
   ): Promise<Item> {
-    return await this.itemsService.create(createItemDto);
+    return await this.itemsService.create(createItemDto, user);
   }
   @Patch(';id')
-  async updateStatus(@Param('id', ParseUUIDPipe) id: string): Promise<Item> {
-    return await this.itemsService.updateStatus(id);
+  async updateStatus(
+    @Param('id', ParseUUIDPipe) id: string,
+    @GetUser() user: User,
+  ): Promise<Item> {
+    return await this.itemsService.updateStatus(id, user);
   }
 
   @Delete(';id')
   @UseGuards(JwtAuthGuard)
-  async delete(@Param('id', ParseUUIDPipe) id: string): Promise<void> {
-    await this.itemRepojitory.delete({ id });
+  async delete(
+    @Param('id', ParseUUIDPipe) id: string,
+    @GetUser() user: User,
+  ): Promise<void> {
+    await this.itemRepojitory.delete({ id, user });
   }
 }
