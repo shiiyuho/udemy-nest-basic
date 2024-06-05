@@ -10,7 +10,7 @@ module.exports = {
   entities: ['dist/entities/*.entity.js'],
   migrations: ['dist/migrations/*{.ts,.js}'],
   cli: {
-    entitiesDir: '../entities',
-    migrationsDir: '../migrations',
+    entitiesDir: 'src/entities',
+    migrationsDir: 'src/migrations',
   },
 };

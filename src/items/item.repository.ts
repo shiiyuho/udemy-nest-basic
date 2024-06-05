@@ -3,7 +3,7 @@ import { Item } from '../entities/item.entity';
 import { EntityRepository, Repository } from 'typeorm';
 import { CreateItemDto } from './dto/create-item.dto';
 import { ItemStatus } from './item-status.enum';
-import { User } from '../entities/user.entity';
+import { User } from 'src/entities/user.entity';
 
 @EntityRepository(Item)
 export class ItemRepository extends Repository<Item> {
